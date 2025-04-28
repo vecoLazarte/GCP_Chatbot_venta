@@ -3,7 +3,7 @@ import type { NextRequest } from 'next/server';
 
 export async function GET(request: NextRequest) {
   // recrea la URL de tu API remota usando los mismos parámetros
-  const url = `https://talleriagen-610199020496.us-west4.run.app/agent?` +
+  const url = `[api]?` +
     new URL(request.url).searchParams.toString();
 
   // forward
