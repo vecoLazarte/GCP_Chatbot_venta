@@ -1,3 +1,4 @@
+
 # Proyecto Next.js
 
 Este es un proyecto de [Next.js](https://nextjs.org) inicializado con [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
@@ -51,12 +52,24 @@ Para la creación de `GOOGLE_CLIENT_ID` y `GOOGLE_CLIENT_SECRET`, sigue estos pa
    http://[reemplaza por tu dominio de app]/api/auth/callback/google
    ```
 
-4. Luego configura las siguientes variables de entorno:
+4. Cuano despliegues en Vercel configura esto en las variables de entorno:
 
 ```bash
 GOOGLE_CLIENT_ID=tu_CLIENT_ID_de_Google
 GOOGLE_CLIENT_SECRET=tu_CLIENT_SECRET_de_Google
 NEXTAUTH_SECRET=tu_clave_secreta_generada (puedes usar `openssl rand -base64 32` o una clave larga similar, por ejemplo: s9f1H3KdL9jYw5vPq8rVzXgN+ADDe1aB1c4D6eF7hI=)
 ```
+
+## Configuración de API
+
+En el archivo:
+
+```
+src/app/api/agent/route.ts
+```
+
+Reemplaza `[API]` por la URL de tu API desplegada.
+
+---
 
 **Autor: MAC**
